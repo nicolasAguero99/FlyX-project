@@ -1,0 +1,23 @@
+{
+  "author": "Nicolás Agüero",
+  "description": "Parcial 2 PWA - Escuela Da Vinci",
+  "name": "Fly x",
+  "dir": "ltr",
+  "orientation": "any",
+  "scope": "/",
+  "start_url": "index.html",
+  "theme_color": "#4338ca",
+  "display": "standalone",
+  "icons": [
+    {
+      "sizes": "16x16",
+      "type": "image/png",
+      "src": "./images/fly-x-logo-16.png"
+    },
+    {
+      "sizes": "144x144",
+      "type": "image/png",
+      "src": "./images/fly-x-logo-144.png"
+    }
+  ]
+}

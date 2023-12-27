@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "verify": false,
+    "image": "https://randomuser.me/api/portraits/men/97.jpg",
+    "name": "Jordan Tucker",
+    "profession": "Abogado",
+    "comment": "La agencia de viajes ofreció un servicio excepcional desde el principio hasta el final de nuestro viaje. El personal fue muy amable y servicial, y nos ayudó a planificar un itinerario que se ajustaba perfectamente a nuestras necesidades y presupuesto"
+  },
+  {
+    "id": 2,
+    "verify": false,
+    "image": "https://randomuser.me/api/portraits/women/68.jpg",
+    "name": "Lillian Harper",
+    "profession": "Empresaria",
+    "comment": "Mi experiencia con esta agencia de viajes fue increíble. Desde la reserva del vuelo hasta la organización de tours y actividades, todo fue fácil y sin problemas. Recomendaría definitivamente sus servicios a cualquiera que busque un viaje sin estrés"
+  },
+  {
+    "id": 3,
+    "verify": true,
+    "image": "https://randomuser.me/api/portraits/men/28.jpg",
+    "name": "Jimmie Green",
+    "profession": "Maestro",
+    "comment": "No puedo decir suficientes cosas buenas sobre esta agencia de viajes. Ellos fueron extremadamente atentos a todas mis preguntas y preocupaciones, y se aseguraron de que tuviera una experiencia de viaje única. Me encantaría trabajar con ellos de nuevo en el futuro"
+  },
+  {
+    "id": 4,
+    "verify": false,
+    "image": "https://randomuser.me/api/portraits/women/28.jpg",
+    "name": "Loretta Prescott",
+    "profession": "Diseñadora Gráfica",
+    "comment": "Mi esposo y yo reservamos un paquete de viaje con esta agencia y nos encantó cada minuto de nuestro viaje. El alojamiento que reservaron para nosotros fue fantástico y las excursiones que nos recomendaron fueron increíbles. La verdad que lo recomiendo demasiado, no se van a arrepentir"
+  },
+  {
+    "id": 5,
+    "verify": true,
+    "image": "https://randomuser.me/api/portraits/women/12.jpg",
+    "name": "Harper Wade",
+    "profession": "Médica",
+    "comment": "La agencia de viajes cumplió con todas mis expectativas. Los precios eran justos y los servicios que ofrecieron fueron de primera clase. Estoy muy contento con mi experiencia de viaje y no dudaría en reservar con ellos de nuevo. Me llevo uno de los mejores recuerdos que voy a tener en mi vida"
+  },
+  {
+    "id": 6,
+    "verify": true,
+    "image": "https://randomuser.me/api/portraits/men/32.jpg",
+    "name": "Jeff Ramirez",
+    "profession": "Desarrollador web",
+    "comment": "Mi esposa y yo reservamos un paquete de viaje con esta agencia y nos encantó cada minuto de nuestro viaje. El alojamiento que reservaron para nosotros fue fantástico y las excursiones que nos recomendaron fueron increíbles. No podríamos haber pedido una mejor experiencia de viaje"
+  }
+]

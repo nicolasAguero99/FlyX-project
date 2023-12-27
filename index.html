@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html class="scroll-smooth">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Fly x - Viaja por todo el mundo</title>
+  <meta name="description" content="Viaja por todo el mundo con Fly x, aprovecha nuestras increíbles ofertas que tenemos para ti" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="shortcut icon" href="images/fly-x-logo.ico" type="image/x-icon">
+  <link rel="stylesheet" href="styles/index.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+  <!-- Manifiesto -->
+  <link rel="manifest" href="./manifest.json">
+
+</head>
+
+<body class="bg-slate-200">
+
+  <!-- -----------
+    Nav
+  ----------- -->
+
+  <div class="bg-gray-100">
+    <nav class="relative flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+        <div class='absolute top-[-9px] right-[10px] lg:top-[-8px] lg:right-[140px] m-auto w-fit h-fit scale-[.22]'>
+          <input type="checkbox" id="toggle" class="toggle--checkbox">
+          <label for="toggle" class="btn-dark-mode toggle--label cursor-pointer">
+            <span class="toggle--label-background"></span>
+          </label>
+        </div>
+      <div class="flex lg:flex-1">
+        <a href="./" class="-m-1.5 p-1.5">
+          <img width='8' height='8' class="h-8 w-auto" src="images/fly-x-logo.svg" alt="Fly x logo">
+        </a>
+      </div>
+
+      <div class="flex lg:hidden">
+        <button id="menu-nav-mobile" type="button" class="lg:hidden">
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+            aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+        </button>
+      </div>
+      <div class="hidden lg:flex lg:gap-x-12">
+        <a href="./" class="text-sm font-semibold leading-6 text-indigo-700">Inicio</a>
+        <a href="./pages/paises.html" class="text-sm font-semibold leading-6 text-gray-900 hover:text-indigo-700">Ver Países</a>
+      </div>
+
+      <div id="nav-mobile" class="hidden" role="dialog" aria-modal="true">
+
+        <div class="fixed inset-0 z-50"></div>
+        <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+          <div class="flex items-center justify-between">
+            <a href="./" class="-m-1.5 p-1.5">
+              <img width='8' height='8' class="h-8 w-auto" src="images/fly-x-logo.svg" alt="Fly x logo">
+            </a>
+            <button id="cross-nav-mobile" type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
+              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+          <div class="mt-6 flow-root">
+            <div class="-my-6 divide-y divide-gray-500/10">
+              <div class="space-y-2 py-6 flex flex-col">
+                <a href="./" class="text-sm font-semibold leading-6 text-indigo-700">Inicio</a>
+                <a href="./pages/paises.html" class="text-sm font-semibold leading-6 text-gray-900 hover:text-indigo-700">Ver Países</a>
+              </div>
+            </div>
+          </div>
+          </div>
+    </nav>
+
+  <!-- -----------
+  Header
+  ----------- -->
+
+    <header id="inicio" class="relative isolate px-6 lg:px-8">
+      <div class="flex flex-row flex-wrap-reverse justify-center align-center gap-x-16">
+        <div class="max-w-xl py-8 lg:py-20">
+          <h1 class="font-bold tracking-tight text-3xl sm:text-4xl lg:text-5xl">Viaja a cualquier parte del mundo</h1>
+          <p class="mt-6 text-lg leading-8 text-gray-500">Mira todos los viajes que tenemos para ti y descubre desde los
+            lugares más recurridos hasta los menos conocidos. ¡Elige tu próximo destino ya!</p>
+          <div class="mt-10 flex items-center gap-x-6">
+            <a href="#destacado" class="rounded-md px-3.5 py-2.5 text-sm font-semibold text-white bg-indigo-700 border-2 border-transparent hover:border-indigo-700 hover:text-indigo-700 hover:bg-transparent transition-ease-in transition-colors duration-300">Viajar
+              ya</a>
+            <a href="./pages/paises.html" class="text-sm font-semibold text-gray-500 hover:text-indigo-700">Ver más <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+        <img width='200' height='200' class="object-contain w-96" src="images/viaje-header.svg" alt="Viaje ilustración">
+      </div>
+    </header>
+  </div>
+
+  <!-- -----------
+  Características
+  ----------- -->
+
+  <main class="mx-auto py-20 px-10">
+    <h2 class="text-center text-4xl pb-4 font-bold tracking-tight text-gray-900">Contamos con</h2>
+    <p class="text-center text-lg pb-14 text-gray-500">Descubre nuestras fortalezas y características</p>
+    <div class="flex flex-row flex-wrap align-center justify-center gap-8">
+      <div class="w-64 h-74 flex bg-neutral-50 px-2 py-8 shadow-md rounded-lg flex-col text-center">
+        <img width='48' height='48' class="w-12 h-auto m-auto mb-4" src="images/seguridad.png" alt="icono de seguridad" loading="lazy">
+        <h5 class="text-gray-950 font-medium text-xl mb-2">Seguridad</h5>
+        <p class="text-gray-500 text-base">Viaja seguro y sin temores</p>
+      </div>
+      <div class="w-64 h-74 flex bg-neutral-50 px-2 py-8 shadow-md rounded-lg flex-col text-center">
+        <img width='48' height='48' class="w-12 h-auto m-auto mb-4" src="images/atencion.png" alt="icono de atencion" loading="lazy">
+        <h5 class="text-gray-950 font-medium text-xl mb-2">Atención</h5>
+        <p class="text-gray-500 text-base">Consulta las 24 horas del día</p>
+      </div>
+      <div class="w-64 h-74 flex bg-neutral-50 px-2 py-8 shadow-md rounded-lg flex-col text-center">
+        <img width='48' height='48' class="w-12 h-auto m-auto mb-4" src="images/variedad.png" alt="icono de variedad" loading="lazy">
+        <h5 class="text-gray-950 font-medium text-xl mb-2">Variedad</h5>
+        <p class="text-gray-500 text-base">Elige el destino que buscas</p>
+      </div>
+      <div class="w-64 h-74 flex bg-neutral-50 px-2 py-8 shadow-md rounded-lg flex-col text-center">
+        <img width='48' height='48' class="w-12 h-auto m-auto mb-4" src="images/ofertas.png" alt="icono de ofertas" loading="lazy">
+        <h5 class="text-gray-950 font-medium text-xl mb-2">Ofertas</h5>
+        <p class="text-gray-500 text-base">Paga menos con nuestras ofertas</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- -----------
+  que ofrecemos
+  ----------- -->
+
+  <div class="bg-gray-100">
+    <section id="que-ofrecemos" class="py-20">
+      <h3 class="text-center text-4xl pb-4 font-bold tracking-tight text-gray-900">¿Qué ofrecemos?</h3>
+      <p class="text-center text-lg pb-14 text-gray-500">Entérate de quienes somos y que tenemos para ti</p>
+      <div class="flex flex-col gap-y-6">
+        <div class="flex flex-col lg:flex-row flex-wrap justify-evenly items-center">
+          <img width='500' height='400' class="w-80 h-auto" src="images/playa-ilustracion.svg" alt="Ilustración de playa" loading="lazy">
+          <p class="text-gray-500 w-4/5  lg:w-2/5">
+            <strong class="text-indigo-700">Fly x</strong> es una </strong>agencia de viajes</strong> que se especializa
+            en ofrecer <strong class="text-indigo-700">experiencias únicas</strong> y </strong>personalizadas</strong> a
+            sus clientes. Su objetivo es hacer que cada viaje sea inolvidable al proporcionar un servicio de <strong
+              class="text-indigo-700">alta calidad</strong> desde el momento en que se contacta con ellos hasta que se
+            regresa a casa.
+            <br>
+            Entre los servicios que ofrecemos se encuentran la planificación de <strong
+              class="text-indigo-700">itinerarios personalizados</strong> para cada cliente, la <strong
+              class="text-indigo-700">reserva de vuelos</strong> y <strong class="text-indigo-700">alojamiento</strong>
+            en destinos de todo el mundo, y la organización de tours y excursiones para conocer los lugares más
+            interesantes del lugar.
+          </p>
+        </div>
+
+        <div class="flex flex-col lg:flex-row-reverse flex-wrap justify-evenly items-center">
+          <img width='500' height='400' class="w-80 h-auto" src="images/turista-ilustracion.svg" alt="Ilustración" loading="lazy">
+          <p class="text-gray-500 w-4/5  lg:w-2/5">
+            Además, Fly x se asegura de que sus clientes tengan acceso a los <strong class="text-indigo-700">mejores
+              precios</strong> y <strong class="text-indigo-700">ofertas</strong> en vuelos y alojamiento, lo que
+            permite que los viajeros disfruten de una experiencia única sin tener que preocuparse por el presupuesto.
+            <br>
+            La agencia también cuenta con un equipo de profesionales altamente capacitados que se aseguran de que cada
+            detalle del viaje esté cubierto, desde la logística de transporte hasta la selección de <strong
+              class="text-indigo-700">restaurantes</strong> y <strong class="text-indigo-700">actividades</strong> para
+            disfrutar en cada destino.
+          </p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- -----------
+  destacados
+  ----------- -->
+
+  <section id="destacado" class="mx-auto py-20 px-10">
+    <h3 class="text-center text-4xl pb-4 font-bold tracking-tight text-gray-900">Lugares más destacados</h3>
+    <p class="text-center text-lg pb-14 text-gray-500">Te presentamos los destinos más concurridos y solicitados por nuestros clientes</p>
+    <div class="flex flex-row flex-wrap align-center justify-center gap-8">
+      <div class="w-72 h-74 bg-neutral-50 flex flex-col gap-y-4 rounded-lg overflow-hidden">
+        <img src="images/rio-de-janeiro.jpg" alt="Imagen de Río de Janeiro" loading="lazy">
+        <h4 class="text-gray-950 font-medium text-xl px-6">Río de Janeiro</h3>
+          <p class="text-gray-500 pb-4 px-6">Es una ciudad brasileña ubicada en la costa atlántica del país, famosa por
+            sus playas de arena blanca, montañas y vida nocturna vibrante. Ven a visitar el icónico Cristo Redentor en
+            el monte Corcovado, con vistas panorámicas de la ciudad y de la bahía de Guanabara.
+          </p>
+      </div>
+      <div class="w-72 h-74 bg-neutral-50 flex flex-col gap-y-4 rounded-lg overflow-hidden">
+        <img src="images/moscu.jpg" alt="Imagen de Moscú" loading="lazy">
+        <h4 class="text-gray-950 font-medium text-xl px-6">Moscú</h3>
+          <p class="text-gray-500 pb-4 px-6">Moscú es la ciudad más grande de Rusia, ubicada en la parte europea del
+            país. Es una metrópolis vibrante y cosmopolita que cuenta con impresionantes monumentos históricos y
+            arquitectónicos, como la famosa Plaza Roja y el Kremlin de Moscú.
+          </p>
+      </div>
+      <div class="w-72 h-74 bg-neutral-50 flex flex-col gap-y-4 rounded-lg overflow-hidden">
+        <img src="images/madrid.jpg" alt="Imagen de Madrid" loading="lazy">
+        <h4 class="text-gray-950 font-medium text-xl px-6">Madrid</h3>
+          <p class="text-gray-500 pb-4 px-6">Madrid es la capital de España y una ciudad vibrante y emocionante que
+            combina la rica historia y cultura españolas con una modernidad dinámica. Conocida por sus museos de
+            renombre mundial, su deliciosa gastronomía, su vida nocturna animada y su ambiente acogedor.
+          </p>
+      </div>
+      <div class="w-72 h-74 bg-neutral-50 flex flex-col gap-y-4 rounded-lg overflow-hidden">
+        <img src="images/atenas.jpg" alt="Imagen de Atenas" loading="lazy">
+        <h4 class="text-gray-950 font-medium text-xl px-6">Atenas</h3>
+          <p class="text-gray-500 pb-4 px-6">Es la capital brasileña ubicada en la costa atlántica del país, famosa por
+            sus playas de arena blanca, montañas y vida nocturna vibrante. Ven a visitar el icónico Cristo Redentor en
+            el monte Corcovado, con vistas panorámicas de la ciudad y de la bahía de Guanabara.
+          </p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- -----------
+  reseñas
+  ----------- -->
+
+  <div class="bg-gray-100">
+    <section class="py-20">
+      <h3 class="text-center text-4xl pb-4 font-bold tracking-tight text-gray-900">Clientes conformes</h3>
+      <p class="text-center text-lg pb-14 text-gray-500">Mira las reseñas de nuestros clientes que han quedado
+        fascinados con nuestro servicio
+      </p>
+      <div id="swiper-comentario" class="swiper">
+        <div id="container-comentarios" class="swiper-wrapper flex items-center" style="min-height: 350px;">
+        </div>
+        <div class="swiper-button-next mx-8 text-indigo-700 hidden sm:block"></div>
+        <div class="swiper-button-prev mx-8 text-indigo-700 hidden sm:block"></div>
+      </div>
+    </section>
+  </div>
+  
+  <!-- -----------
+  footer
+  ----------- -->
+
+  <footer class="w-full py-8 gap-6 flex flex-col justify-center bg-slate-300 text-gray-900">
+    <h5 class="text-center text-2xl font-bold ">Fly x - Viaja por todo el mundo</h5>
+    <small class="text-center text-sm font-medium text-gray-500 text-center mx-6">&copy; Copyright Nicolás Agüero -
+      DWT3AP - Parcial 2 - Escuela Da Vinci</small>
+    <div class="flex flex-row flex-wrap justify-center items-center gap-8 mt-4 px-10">
+      <a href="https://www.instagram.com/" class="w-24 flex flex-col items-center gap-1 transition-transform duration-300 ease-out hover:scale-110">
+        <svg class="w-8 h-auto" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"/><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M2 6C2 3.79086 3.79086 2 6 2H18C20.2091 2 22 3.79086 22 6V18C22 20.2091 20.2091 22 18 22H6C3.79086 22 2 20.2091 2 18V6ZM6 4C4.89543 4 4 4.89543 4 6V18C4 19.1046 4.89543 20 6 20H18C19.1046 20 20 19.1046 20 18V6C20 4.89543 19.1046 4 18 4H6ZM12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9ZM7 12C7 9.23858 9.23858 7 12 7C14.7614 7 17 9.23858 17 12C17 14.7614 14.7614 17 12 17C9.23858 17 7 14.7614 7 12ZM17.5 8C18.3284 8 19 7.32843 19 6.5C19 5.67157 18.3284 5 17.5 5C16.6716 5 16 5.67157 16 6.5C16 7.32843 16.6716 8 17.5 8Z" fill="currentColor"/> </g></svg>
+        <span class="font-medium text-gray-900">Instagram</span>
+      </a>
+      <a href="https://www.facebook.com/" class="w-24 flex flex-col items-center gap-1 transition-transform duration-300 ease-out hover:scale-110">
+        <svg class="w-8 h-auto" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"/><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M2 6C2 3.79086 3.79086 2 6 2H18C20.2091 2 22 3.79086 22 6V18C22 20.2091 20.2091 22 18 22H6C3.79086 22 2 20.2091 2 18V6ZM6 4C4.89543 4 4 4.89543 4 6V18C4 19.1046 4.89543 20 6 20H12V13H11C10.4477 13 10 12.5523 10 12C10 11.4477 10.4477 11 11 11H12V9.5C12 7.567 13.567 6 15.5 6H16.1C16.6523 6 17.1 6.44772 17.1 7C17.1 7.55228 16.6523 8 16.1 8H15.5C14.6716 8 14 8.67157 14 9.5V11H16.1C16.6523 11 17.1 11.4477 17.1 12C17.1 12.5523 16.6523 13 16.1 13H14V20H18C19.1046 20 20 19.1046 20 18V6C20 4.89543 19.1046 4 18 4H6Z" fill="currentColor"/> </g></svg>
+        <span class="font-medium text-gray-900">Facebook</span>
+      </a>
+      <a href="https://www.twitter.com/" class="w-24 flex flex-col items-center gap-1 transition-transform duration-300 ease-out hover:scale-110">
+        <svg class="w-8 h-auto" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"/><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M14.8486 5.65845C13.1442 5.65845 11.7626 7.0401 11.7626 8.74446C11.7626 8.95304 11.7831 9.15581 11.822 9.35119C11.8846 9.66589 11.7924 9.99153 11.5741 10.2267C11.3558 10.4619 11.0379 10.578 10.7194 10.5389C8.51116 10.268 6.50248 9.35556 4.88498 7.9954C4.91649 8.59732 5.12515 9.23671 5.57799 9.90654L6.25677 10.9106L5.14211 11.3863L4.92704 11.4781C5.0869 11.6609 5.2791 11.8487 5.49369 12.0332C5.73717 12.2425 5.97247 12.4165 6.14726 12.5381C6.23408 12.5985 6.30452 12.645 6.35171 12.6755C6.37527 12.6907 6.39294 12.7018 6.40383 12.7086L6.41495 12.7155L6.41519 12.7157L6.41551 12.7159L6.41578 12.7161L6.41619 12.7163L6.41647 12.7165L7.96448 13.655L6.34397 14.4653C6.26374 14.5054 6.18367 14.5412 6.10393 14.573C6.42924 14.8471 6.82517 15.0995 7.2464 15.2986L8.63623 15.9556L7.47226 16.9598C6.8369 17.508 6.19778 17.9166 5.36946 18.1326C6.59681 18.7875 8.00315 19.1596 9.49941 19.1596C14.3045 19.1596 18.1746 15.325 18.1746 10.6256V10.1059L18.5998 9.80721C19.2636 9.34107 19.7329 8.71068 20.0689 7.99004H18.5398H17.9084L17.637 7.41994C17.1401 6.37633 16.0772 5.65845 14.8486 5.65845ZM3.56882 12.9581C3.38031 13.174 3.29093 13.4642 3.33193 13.7553C3.44474 14.5563 3.92441 15.2462 4.45444 15.7728C4.59838 15.9158 4.75232 16.0531 4.91396 16.184C4.88926 16.1909 4.86437 16.1975 4.83925 16.2038C4.35789 16.3243 3.70926 16.3494 2.62755 16.2434C2.20934 16.2024 1.81014 16.4273 1.62841 16.8062C1.44668 17.185 1.5212 17.6371 1.81492 17.9376C3.75693 19.9245 6.48413 21.1596 9.49941 21.1596C15.212 21.1596 19.8978 16.7239 20.1628 11.126C21.4521 10.0429 22.0976 8.57673 22.4458 7.24263C22.5241 6.94292 22.459 6.62387 22.2696 6.37873C22.0803 6.13359 21.788 5.99004 21.4783 5.99004H19.1247C18.2201 4.58853 16.6437 3.65845 14.8486 3.65845C12.1796 3.65845 9.99072 5.71435 9.7793 8.32892C7.91032 7.84456 6.2705 6.78758 5.05863 5.35408C4.83759 5.09261 4.49814 4.9624 4.15894 5.00897C3.81974 5.05554 3.52794 5.27241 3.38555 5.58378C2.78087 6.90597 2.66434 8.43104 3.34116 9.98046L3.10746 10.0802C2.64466 10.2777 2.40073 10.7884 2.5379 11.2725C2.72276 11.925 3.14129 12.5011 3.56882 12.9581Z" fill="currentColor"/></g></svg>
+        <span class="font-medium text-gray-900">Twitter</span>
+      </a>
+      <a href="https://www.gmail.com/" class="w-24 flex flex-col items-center gap-1 transition-transform duration-300 ease-out hover:scale-110">
+        <svg class="w-8 h-auto" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none"><g id="SVGRepo_bgCarrier" stroke-width="0"/><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/><g id="SVGRepo_iconCarrier"> <title/> <g id="Complete"> <g id="mail"> <g> <polyline fill="none" points="4 8.2 12 14.1 20 8.2" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/> <rect fill="none" height="14" rx="2" ry="2" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="18" x="3" y="6.5"/> </g> </g> </g> </g></svg>
+        <span class="font-medium text-gray-900">Mail</span>
+      </a>
+    </div>
+  </footer>
+
+  <script src="index.js" async defer></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+  <script>
+    // Slider Comentarios
+
+    var swiperComments = new Swiper("#swiper-comentario", {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      centeredSlides: true,
+      slidesPerView: "auto",
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+
+  </script>
+</body>
+</html>

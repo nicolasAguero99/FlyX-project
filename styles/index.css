@@ -1,0 +1,318 @@
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #c7c7c756;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0284c7;
+  border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4438cad7;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: #4338ca;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #4338ca !important;
+}
+
+#slider-countries > #container-countries > .swiper-slide *::selection {
+  background-color: transparent !important;
+}
+
+#slider-countries:active {
+  cursor: grabbing !important;
+}
+
+#container-single-country > div > ul > li {
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+.toUp {
+  -webkit-animation: fade-in-bottom .6s ease-out;
+  animation: fade-in-bottom .6s ease-out;
+}
+
+.toUpReverse {
+  -webkit-animation: fade-in-bottom 1s ease-out reverse forwards;
+  animation: fade-in-bottom 1s ease-out reverse forwards;
+}
+
+@-webkit-keyframes fade-in-bottom {
+  0% {
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-bottom {
+  0% {
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* 
+---------
+Dark mode 
+--------- 
+*/
+
+body {
+  transition: all .5s ease-out;
+}
+
+body.dark-mode,
+body.dark-mode #nav-mobile div:nth-child(2) {
+  color: white;
+  background-color: #0f172a;
+}
+
+body.dark-mode:not(div *) {
+  color: white; 
+}
+
+body.dark-mode p {
+  color: #9ca3af !important; 
+}
+
+body.dark-mode header:not(#header-countries) a:first-child {
+  background-color: #60a5fa;
+  color: white !important;
+}
+
+body.dark-mode header:not(#header-countries) a:first-child:hover {
+  border: 2px solid #60a5fa;
+  background-color: transparent;
+  color: #60a5fa !important;
+}
+
+body.dark-mode header:not(#header-countries) a:last-child:hover {
+  color: #9ca3af !important;
+}
+
+body.dark-mode a:not(nav *:last-child, header a:first-child, footer a) ,
+body.dark-mode .active,
+body.dark-mode nav a:last-child:hover,
+body.dark-mode #header-countries nav a:hover,
+body.dark-mode #btn-fav-section,
+body.dark-mode strong {
+  color: #60a5fa !important; 
+}
+
+body.dark-mode #btn-fav-section svg g {
+  stroke: #60a5fa !important; 
+}
+
+body.dark-mode #btn-fav-section:hover {
+  opacity: .8; 
+}
+
+body.dark-mode > div:not(#alert-fav, #alert-unfav, #next-destiny) {
+  color: white;
+  background-color: #1f2937;
+}
+
+body.dark-mode > footer {
+  background-color: #0f172a;
+}
+
+body.dark-mode > footer small {
+  color: #9ca3af; 
+}
+
+body.dark-mode > footer a {
+  color: white;
+}
+
+body.dark-mode > footer a:not(:last-child) svg * {
+  fill: white;
+}
+
+body.dark-mode #cross-nav-mobile > svg,
+body.dark-mode > footer a:last-child svg * {
+  stroke: white !important;
+}
+
+body.dark-mode .swiper-pagination > span{
+  background-color: white !important;
+}
+
+
+/* -------------
+Boton dark mode
+------------- */
+
+:root {
+  /** sunny side **/
+  --blue-background: #C2E9F6;
+  --blue-border: #60a5fa;
+  --blue-color: #60a5fa;
+  --yellow-background: #fffaa8;
+  --yellow-border: #f5eb71;
+  /** dark side **/
+  --indigo-background: #4338ca;
+  --indigo-border: #4338ca;
+  --indigo-color: #4338ca;
+  --gray-border: #e8e8ea;
+  --gray-dots: #e8e8ea;
+  /** general **/
+  --white: #fff;
+}
+
+
+.toggle--checkbox {
+  display: none;
+}
+.toggle--checkbox:checked ~ .background {
+  background: var(--indigo-background);
+}
+.toggle--checkbox:checked + .toggle--label {
+  background: var(--indigo-color);
+  border-color: var(--indigo-border);
+}
+.toggle--checkbox:checked + .toggle--label .toggle--label-background {
+  left: 60px;
+  width: 5px;
+}
+.toggle--checkbox:checked + .toggle--label .toggle--label-background:before {
+  width: 5px;
+  height: 5px;
+  top: -25px;
+}
+.toggle--checkbox:checked + .toggle--label .toggle--label-background:after {
+  width: 5px;
+  height: 5px;
+  left: -30px;
+  top: 20px;
+}
+.toggle--checkbox:checked + .toggle--label:before {
+  background: var(--white);
+  border-color: var(--gray-border);
+  animation-name: switch;
+  animation-duration: 350ms;
+  animation-fill-mode: forwards;
+}
+.toggle--checkbox:checked + .toggle--label:after {
+  transition-delay: 350ms;
+  opacity: 1;
+}
+.toggle--label {
+  width: 200px;
+  height: 100px;
+  background: var(--blue-color);
+  border-radius: 100px;
+  border: 5px solid var(--blue-border);
+  display: flex;
+  position: relative;
+  transition: all 350ms ease-in;
+}
+.toggle--label-background {
+  width: 10px;
+  height: 5px;
+  border-radius: 5px;
+  position: relative;
+  background: var(--white);
+  left: 135px;
+  top: 45px;
+  transition: all 150ms ease-in;
+}
+.toggle--label-background:before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  width: 40px;
+  height: 5px;
+  border-radius: 5px;
+  background: var(--white);
+  left: -20px;
+  transition: all 150ms ease-in;
+}
+.toggle--label-background:after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  width: 40px;
+  height: 5px;
+  border-radius: 5px;
+  background: var(--white);
+  left: -10px;
+  transition: all 150ms ease-in;
+}
+.toggle--label:before {
+  animation-name: reverse;
+  animation-duration: 350ms;
+  animation-fill-mode: forwards;
+  transition: all 350ms ease-in;
+  content: "";
+  width: 82px;
+  height: 82px;
+  border: 5px solid var(--yellow-border);
+  top: 4px;
+  left: 4px;
+  position: absolute;
+  border-radius: 82px;
+  background: var(--yellow-background);
+}
+.toggle--label:after {
+  transition-delay: 0ms;
+  transition: all 250ms ease-in;
+  position: absolute;
+  content: "";
+  box-shadow: var(--gray-dots) -13px 0 0 2px, var(--gray-dots) -24px 14px 0 -2px;
+  left: 143px;
+  top: 23px;
+  width: 10px;
+  height: 10px;
+  background: transparent;
+  border-radius: 50%;
+  opacity: 0;
+}
+
+@keyframes switch {
+  0% {
+    left: 4px;
+  }
+  60% {
+    left: 4px;
+    width: 112px;
+  }
+  100% {
+    left: 104px;
+    width: 82px;
+  }
+}
+@keyframes reverse {
+  0% {
+    left: 104px;
+    width: 82px;
+  }
+  60% {
+    left: 72px;
+    width: 112px;
+  }
+  100% {
+    left: 4px;
+  }
+}

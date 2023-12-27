@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Viaja por todo el mundo con Fly x, aprovecha nuestras increíbles ofertas que tenemos para ti" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="shortcut icon" href="../images/fly-x-logo.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../styles/index.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <title>Fly x - Países</title>
+</head>
+<body>
+
+  <!-- -----------
+    Nav / Header
+  ----------- -->
+
+  <div class="bg-gray-200 w-screen h-screen fixed z-[-1]"></div>
+
+    <header id="header-countries">
+        <nav id='nav-countries' class="relative flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+            <div class='absolute top-[-9px] right-[10px] lg:top-[-8px] lg:right-[140px] m-auto w-fit h-fit scale-[.22]'>
+              <input type="checkbox" id="toggle" class="toggle--checkbox">
+              <label for="toggle" class="btn-dark-mode toggle--label cursor-pointer">
+                <span class="toggle--label-background"></span>
+              </label>
+            </div>
+          <div class="flex lg:flex-1">
+            <a href="../" class="-m-1.5 p-1.5">
+              <img class="h-8 w-auto" src="../images/fly-x-logo.svg" alt="Fly x logo">
+            </a>
+          </div>
+
+          <div class="flex lg:hidden">
+            <button id="menu-nav-mobile" type="button" class="lg:hidden">
+              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+              </svg>
+            </button>
+          </div>
+          <div class="hidden lg:flex lg:gap-x-12">
+            <a href="../" class="text-sm font-semibold leading-6 text-gray-900">Inicio</a>
+            <a href="../pages/paises.html" class="active text-sm font-semibold leading-6 text-indigo-700 hover:text-indigo-700">Ver Países</a>
+          </div>
+
+          <div id="nav-mobile" class="hidden nav-mobile-countries" role="dialog" aria-modal="true">
+
+            <div class="fixed inset-0 z-50"></div>
+            <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+              <div class="flex items-center justify-between">
+                <a href="../" class="-m-1.5 p-1.5">
+                  <img class="h-8 w-auto" src="../images/fly-x-logo.svg" alt="Fly x logo">
+                </a>
+                <button id="cross-nav-mobile" type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
+                  <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                    aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
+              <div class="mt-6 flow-root">
+                <div class="-my-6 divide-y divide-gray-500/10">
+                  <div class="space-y-2 py-6 flex flex-col">
+                    <a href="../" class="text-sm font-semibold leading-6 text-gray-900">Inicio</a>
+                    <a href="../pages/paises.html" class="active text-sm font-semibold leading-6 text-indigo-700 hover:text-indigo-700">Ver Países</a>
+                  </div>
+                </div>
+              </div>
+              </div>
+        </nav>
+      </header>
+
+  <!-- -----------
+    buscar países
+  ----------- -->
+
+  <section class='mt-8 flex flex-col gap-8'>
+    <h1 class="px-8 text-center text-4xl pb-4 font-bold tracking-tight text-gray-900">Busca un país</h1>
+    <div class='flex flex-col justify-center gap-4'>
+      <div class='relative flex flex-col sm:flex-row flex-wrap items-center sm:items-stretch justify-center gap-4 mx-4'>
+        <div class='relative w-7 z-10 [&+input]:sm:hover:ps-[40px] [&+input]:sm:focus:ps-[40px] [&+input]:sm:hover:w-[16rem] [&+input]:md:hover:w-[50%] [&+input]:lg:hover:w-[40%] [&+input]:md:hover:w-[10px] [&+input]:sm:focus:w-[16rem] [&+input]:md:focus:w-[50%] [&+input]:lg:focus:w-[40%] [&+input]:md:focus:w-[10px]'>
+          <img class='absolute hidden sm:block sm:left-[52.5px] sm:top-[8px]' src="../images/lupa-icono.svg" alt="lupa icono">
+        </div>
+        <input id='value-search-country' class='relative text-gray-950 sm:text-transparent sm:hover:text-gray-950 sm:focus:text-gray-950 sm:placeholder:text-transparent sm:hover:placeholder:text-gray-950 sm:focus:placeholder:text-gray-950 text-lg px-4 sm:hover:ps-[40px] sm:focus:ps-[40px] w-100 sm:w-[45px] sm:hover:w-[16rem] md:hover:w-[50%] lg:hover:w-[40%] md:hover:w-[10px] sm:focus:w-[16rem] md:focus:w-[50%] lg:focus:w-[40%] md:focus:w-[10px] py-2 outline-none border-none rounded-full transition-all duration-700' type="text" placeholder='Ingrese el país'>
+        <select class='text-gray-950 text-md px-4 py-2 outline-none border-none rounded-lg' id="select-filter" class='text-gray-950'>
+          <option class='text-red-700 font-semibold py-4' value="none" selected>Sin filtrar</option>
+          <option class='text-gray-950' value='South America' type="checkbox">América del sur</option>
+          <option class='text-gray-950' value='North America' type="checkbox">América del norte / central</option>
+          <option class='text-gray-950' value='Europe' type="checkbox">Europa</option>
+          <option class='text-gray-950' value='Asia' type="checkbox">Asia</option>
+          <option class='text-gray-950' value='Africa' type="checkbox">África</option>
+          <option class='text-gray-950' value='Oceania' type="checkbox">Oceanía</option>
+          <option class='text-gray-950' value='Antarctica'checked type="checkbox">Antártica</option>
+        </select>
+      </div>
+    </div>
+    <div id='country-searched' class="max-w-[1000px] flex flex-wrap gap-4 justify-center sm:px-8 m-auto items-center"></div>
+  </section>
+
+  
+  <!-- -----------
+    países
+  ----------- -->
+
+  <main id="paises" class="pt-20">
+    <h2 class="px-8 text-center text-4xl pb-4 font-bold tracking-tight text-gray-900">¿No sabes que país elegir?</h2>
+    <p class="px-8 text-center text-lg pb-14 text-gray-500">Aquí te dejamos varios países con su información para que puedas
+      escoger uno</p>
+    <div id="slider-countries" class="swiper mySwiper" style="width: 100%; min-height: 100%; height: 320px; cursor: grab;">
+      <div id="container-countries" class="swiper-wrapper"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+    <section id="section-single-country">
+      <div class='flex justify-center gap-4 items-end my-8'>
+        <h3 class="hidden text-center text-3xl font-bold tracking-tight text-gray-900 ">Más información del país</h3>
+        <button id="btn-close-info" class='hidden w-fit h-fit translate-y-0.5 hover:opacity-50 transition-all transition-300' title='Cerrar más info'>
+          <svg class='w-8 h-auto [&>g+circle+rect]:stroke-neutral-50' viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="none"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>Cerrar más info</title> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Close-Circle"> <rect id="Rectangle" fill-rule="nonzero" x="0" y="0" width="24" height="24"> </rect> <circle id="Oval" stroke="currentColor" stroke-width="2" stroke-linecap="round" cx="12" cy="12" r="9"> </circle> <line x1="14.1213" y1="9.87866" x2="9.8787" y2="14.1213" id="Path" stroke="currentColor" stroke-width="2" stroke-linecap="round"> </line> <line x1="9.87866" y1="9.87866" x2="14.1213" y2="14.1213" id="Path" stroke="currentColor" stroke-width="2" stroke-linecap="round"> </line> </g> </g> </g></svg>
+        </button>
+      </div>
+      <div id="container-single-country"></div>
+    </section>
+  </main>
+
+  <!-- -----------
+    alerta agregado a favortios
+  ----------- -->
+
+  <div id="alert-fav" class='hidden z-50 flex gap-2 w-screen bg-lime-700 py-2 px-4 fixed bottom-0 toUp'>
+    <svg class="w-5 h-auto" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path opacity="0.1" d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" fill="none"></path> <path d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="#ffffff" stroke-width="2"></path> <path d="M9 12L10.6828 13.6828V13.6828C10.858 13.858 11.142 13.858 11.3172 13.6828V13.6828L15 10" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+    <span class="text-lg text-neutral-50">Has agregado un país a favoritos</span>
+  </div>
+
+  <div id="alert-unfav" class='hidden z-50 flex gap-2 w-screen bg-red-700 py-2 px-4 fixed bottom-0 toUp'>
+    <svg class="w-5 h-auto" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path opacity="0.1" d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" fill="none"></path> <path d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="#ffffff" stroke-width="2"></path> <path d="M9 12L10.6828 13.6828V13.6828C10.858 13.858 11.142 13.858 11.3172 13.6828V13.6828L15 10" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+    <span class="text-lg text-neutral-50">Has eliminado un país de favoritos</span>
+  </div>
+
+  <!-- -----------
+    países favoritos
+  ----------- -->
+
+  <section class="flex flex-col my-16">
+    <button id="btn-fav-section" class="closedFavSection flex items-center justify-between gap-2 m-auto rounded-md px-3.5 py-2.5 text-sm font-semibold text-indigo-700 hover:text-indigo-400 [&>svg]:stroke-indigo-700 [&>svg]:hover:stroke-indigo-400">
+      <span></span>
+      <svg class="w-5 h-auto fill-indigo-900" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title></title> <g id="Complete"> <g id="F-Chevron"> <polyline fill="none" id="Down" points="5 8.5 12 15.5 19 8.5" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polyline> </g> </g> </g></svg>
+    </button>
+    <div id='container-favoritos'>
+      <div class="flex justify-center gap-8 items-center">
+        <h3 class="hidden my-8 text-center text-3xl font-bold tracking-tight text-gray-900">Tus países favoritos</h3>
+        <button id="btn-delete-fav" onclick='deleteAllData()' class='hidden w-fit h-fit [&>svg>g>path]:stroke-red-700 [&>svg>g>path]:hover:stroke-red-900' title='Eliminar todos los favoritos'>
+          <svg class='w-8 h-auto' viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M10 11V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M14 11V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M4 7H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M6 7H12H18V18C18 19.6569 16.6569 21 15 21H9C7.34315 21 6 19.6569 6 18V7Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M9 5C9 3.89543 9.89543 3 11 3H13C14.1046 3 15 3.89543 15 5V7H9V5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- -----------
+  proximo destino
+  ----------- -->
+
+  <div id="next-destiny" class='z-30 flex justify-between items-center w-72 bg-neutral-50 ring-gray-400 ring-2 py-2 px-4 rounded-r-full fixed left-0 bottom-0 transition-all duration-500'>
+    <div>
+      <div class='text-lg font-bold text-gray-950 flex gap-1 items-center'>
+        <span>Próximo destino</span>
+      </div>
+      <div id="container-next-country" class='flex gap-3 items-center'>
+        <span class='text-sm text-gray-500'>No has asignado nigún país</span>
+      </div>
+    </div>
+    <button type='button' id="btn-show-next-destiny" class="w-8 h-8 bg-neutral-200 hover:bg-neutral-300 transition-colors duration-300 rounded-full">
+      <svg class="w-5 h-auto rotate-90 m-auto stroke-gray-950" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title></title> <g id="Complete"> <g id="F-Chevron"> <polyline fill="none" id="Down" points="5 8.5 12 15.5 19 8.5" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polyline> </g> </g> </g></svg>
+    </button>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+  <script>
+    // Slider Paises
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: "auto",
+      spaceBetween: 30,
+      freeMode: false,
+      centeredSlides: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  </script>
+
+  <script src="../index.js" async defer></script>
+
+</body>
+</html>
